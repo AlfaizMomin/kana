@@ -8,6 +8,7 @@ class SampleKanaConverter
         if(args.length < 1) {
             System.out.println("Must specify a term to convert");
             System.out.println("EXAMPLE:");
+            System.out.println("  java SampleKanaConverter ï¾ƒï½½ï¾„");
             System.out.println("  java SampleKanaConverter ﾃｽﾄ");
             return;
         }
