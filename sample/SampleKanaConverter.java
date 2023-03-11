@@ -7,11 +7,8 @@ class SampleKanaConverter
         // Check for arg input
         if(args.length < 1) {
             System.out.println("EXAMPLE:");
-                        System.out.println("EXAMPLE:kkk");
             System.out.println("  java SampleKanaConverter ï¾ƒï½½ï¾„");
             System.out.println("  java SampleKanaConverter ﾃｽﾄ");
-             System.out.println("EXAMPLE:kkk"); System.out.println("EXAMPLE:kkk");
-             System.out.println("EXAMPLE:kkk");
             return;
         }
         String input_string = args[0];
