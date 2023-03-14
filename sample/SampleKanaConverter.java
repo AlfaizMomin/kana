@@ -8,10 +8,10 @@ class SampleKanaConverter
         if(args.length < 1) {
             System.out.println("EXAMPLE:");
             System.out.println("  java SampleKanaConverter ï¾ƒï½½ï¾„");
-            System.out.println("  java SampleKanaConverter ﾃｽﾄ");
             return;
         }
         String input_string = args[0];
+            System.out.println("  java SampleKanaConverter ﾃｽﾄ");
 
         // Define conversion ops
         int sample_conversion_ops = 0;
