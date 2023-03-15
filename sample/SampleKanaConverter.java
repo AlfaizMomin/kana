@@ -11,7 +11,6 @@ class SampleKanaConverter
             return;
         }
         String input_string = args[0];
-            System.out.println("  java SampleKanaConverter ﾃｽﾄ");
 
         // Define conversion ops
         int sample_conversion_ops = 0;
