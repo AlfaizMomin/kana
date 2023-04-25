@@ -229,4 +229,5 @@ public class KanaAppraiser
         return false;
     }
     //}}}
+ 
 }
