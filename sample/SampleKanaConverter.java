@@ -1,5 +1,4 @@
 import com.mariten.kanatools.KanaConverter;
-
 class SampleKanaConverter
 {
     public static void main(String[] args)
