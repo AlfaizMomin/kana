@@ -53,7 +53,13 @@ public class KanaAppraiser
     public static final char ZENKAKU_LETTER_LOWER_FIRST = 'ａ';         // U+FF41
     public static final char ZENKAKU_LETTER_LOWER_LAST  = 'ｚ';         // U+FF5A
 
-
+ System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
     // Bounds for All Alphanumeric and Symbol ASCII
     public static final char HANKAKU_SPACE = ' ';                       // U+0020
     public static final char HANKAKU_ASCII_FIRST = '!';                 // U+0021
