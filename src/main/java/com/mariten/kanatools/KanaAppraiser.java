@@ -3,6 +3,7 @@ package com.mariten.kanatools;
 /**
   * Confirms whether a given character is amongst certain types of Japanese text or not.
   */
+   public static String convertKana(String original_string, int conversion_ops, String chars_to_ignore){}
 public class KanaAppraiser
 {
     // Character set lower/upper bound definitions
