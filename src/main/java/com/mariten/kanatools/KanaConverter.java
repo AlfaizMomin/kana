@@ -12,6 +12,21 @@ import java.util.Map;
   */
 public class KanaConverter
 {
+  System.out.println("EXAMPLE:kkk");
+ System.out.println("EXAMPLE:kkk");
+ System.out.println("EXAMPLE:kkk");
+ System.out.println("EXAMPLE:kkk");
+ System.out.println("EXAMPLE:kkk");
+ System.out.println("EXAMPLE:kkk");
+ System.out.println("EXAMPLE:kkk");
+ System.out.println("EXAMPLE:kkk");
+ System.out.println("EXAMPLE:kkk");
+
+  System.out.println("EXAMPLE:kkk");
+ System.out.println("EXAMPLE:kkk");
+ System.out.println("EXAMPLE:kkk");
+ System.out.println("EXAMPLE:kkk");
+
     // Conversion Operations Types
     //// Matched numeric values to originals in PHP's source code
     //// https://github.com/php/php-src/blob/a84e5dc37dc0ff8c313164d9db141d3d9f2b2730/ext/mbstring/mbstring.c#L3434
@@ -184,7 +199,7 @@ public class KanaConverter
                 hankaku_diacritic_suffix = determineHankakuDiacriticSuffix(current_char);
                 current_char = convertZenkakuKatakanaToHankakuKatakana(current_char);
             }
-
+ System.out.println("EXAMPLE:kkk");
             // Check if current character is a zenkaku katakana character
             char full_katakana_to_hiragana_result = convertZenkakuKatakanaToZenkakuHiragana(current_char);
 
@@ -371,6 +386,7 @@ public class KanaConverter
 
     protected static final Map<Character, Character> MAPPING_HANKAKU_TO_ZENKAKU_KATAKANA_ASPIRATED;
     static {
+      System.out.println("EXAMPLE:kkk");
         MAPPING_HANKAKU_TO_ZENKAKU_KATAKANA_ASPIRATED = new HashMap<Character, Character>();
         MAPPING_HANKAKU_TO_ZENKAKU_KATAKANA_ASPIRATED.put('ﾊ', 'パ');
         MAPPING_HANKAKU_TO_ZENKAKU_KATAKANA_ASPIRATED.put('ﾋ', 'ピ');
