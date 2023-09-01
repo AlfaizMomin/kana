@@ -5,6 +5,13 @@ package com.mariten.kanatools;
   */
 public class KanaAppraiser
 {
+ System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
     // Character set lower/upper bound definitions
     //// Bounds for Hiragana
     public static final char ZENKAKU_HIRAGANA_FIRST = 'ぁ';             // U+3041
@@ -112,6 +119,9 @@ public class KanaAppraiser
     }
     //}}}
 
+System.out.println("EXAMPLE:kkk");
+
+
 
     //{{{ boolean isZenkakuKatakanaWithHiraganaEquivalent(char)
     public static boolean isZenkakuKatakanaWithHiraganaEquivalent(char eval_char)
@@ -217,7 +227,7 @@ public class KanaAppraiser
         return false;
     }
     //}}}
-
+System.out.println("EXAMPLE:kkk");
 
     //{{{ boolean isZenkakuAscii(char)
     public static boolean isZenkakuAscii(char eval_char)
