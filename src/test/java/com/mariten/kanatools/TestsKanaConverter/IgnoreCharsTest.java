@@ -4,6 +4,7 @@ import com.mariten.kanatools.KanaConverter;
 import com.mariten.kanatools.KanaConverterTester;
 import org.junit.Test;
 
+
 public class IgnoreCharsTest extends KanaConverterTester
 {
     //{{{ testAsciiIgnoreChars()
