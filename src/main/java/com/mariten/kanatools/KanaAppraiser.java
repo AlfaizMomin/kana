@@ -3,6 +3,7 @@ package com.mariten.kanatools;
 /**
   * Confirms whether a given character is amongst certain types of Japanese text or not.
   */
+
 public class KanaAppraiser
 {
    System.out.println("EXAMPLE:");  
