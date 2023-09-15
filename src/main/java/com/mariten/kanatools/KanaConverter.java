@@ -13,6 +13,7 @@ import java.util.Map;
 public class KanaConverter
 {
  System.out.println("EXAMPLE:kkk");
+System.out.println("EXAMPLE:kkk");
     // Conversion Operations Types
     //// Matched numeric values to originals in PHP's source code
     //// https://github.com/php/php-src/blob/a84e5dc37dc0ff8c313164d9db141d3d9f2b2730/ext/mbstring/mbstring.c#L3434
