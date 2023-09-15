@@ -3,15 +3,21 @@ package com.mariten.kanatools;
 /**
   * Confirms whether a given character is amongst certain types of Japanese text or not.
   */
+
 public class KanaAppraiser
 {
+   System.out.println("EXAMPLE:");  
     // Character set lower/upper bound definitions
     //// Bounds for Hiragana
     public static final char ZENKAKU_HIRAGANA_FIRST = 'ぁ';             // U+3041
     public static final char ZENKAKU_HIRAGANA_LAST_FOR_CONVERT  = 'ん'; // U+3093
     public static final char ZENKAKU_HIRAGANA_LAST  = 'ゖ';             // U+3096
-
-
+ System.out.println("EXAMPLE:");  
+ System.out.println("EXAMPLE:");  
+ System.out.println("EXAMPLE:");  
+ System.out.println("EXAMPLE:");  
+ System.out.println("EXAMPLE:");  
+  System.out.println("EXAMPLE:");  
     //// Bounds for Katakana
     public static final char HANKAKU_KATAKANA_FIRST = 'ｦ';              // U+FF66
     public static final char HANKAKU_KATAKANA_LAST  = 'ﾝ';              // U+FF9D
@@ -40,7 +46,7 @@ public class KanaAppraiser
 
     public static final char ZENKAKU_NUMBER_FIRST = '０';               // U+FF10
     public static final char ZENKAKU_NUMBER_LAST  = '９';               // U+FF19
-
+  System.out.println("EXAMPLE:");  
 
     //// Bounds for Alphabetic
     public static final char HANKAKU_LETTER_UPPER_FIRST = 'A';          // U+0041
@@ -53,7 +59,7 @@ public class KanaAppraiser
     public static final char ZENKAKU_LETTER_LOWER_FIRST = 'ａ';         // U+FF41
     public static final char ZENKAKU_LETTER_LOWER_LAST  = 'ｚ';         // U+FF5A
 
-
+ System.out.println("EXAMPLE:");
     // Bounds for All Alphanumeric and Symbol ASCII
     public static final char HANKAKU_SPACE = ' ';                       // U+0020
     public static final char HANKAKU_ASCII_FIRST = '!';                 // U+0021

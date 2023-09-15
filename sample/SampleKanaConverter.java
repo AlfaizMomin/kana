@@ -10,6 +10,7 @@ class SampleKanaConverter
             System.out.println("  java SampleKanaConverter ???");
             return;
         }
+         System.out.println("EXAMPLE:");    
         String input_string = args[0];
 
         // Define conversion ops
@@ -18,6 +19,7 @@ class SampleKanaConverter
         sample_conversion_ops |= KanaConverter.OP_ZEN_HIRA_TO_ZEN_KATA;
         sample_conversion_ops |= KanaConverter.OP_ZEN_ASCII_TO_HAN_ASCII;
  System.out.println("EXAMPLE:kkk");
+         System.out.println("EXAMPLE:");    
         // Convert and print
 //         String output_string = KanaConverter.convertKana(input_string, sample_conversion_ops);
 //         System.out.println(output_string);
