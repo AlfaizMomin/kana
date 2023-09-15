@@ -34,6 +34,7 @@ public class KanaConverter
     //// Maintain backwards compatibility (based on mb_convert_kana's "$option" parameter from PHP)
     //// Details: http://php.net/manual/en/function.mb-convert-kana.php
     public static final Map<Character, Integer> LETTER_OP_CODE_LOOKUP;
+ //
     static {
         LETTER_OP_CODE_LOOKUP = new HashMap<Character, Integer>();
         LETTER_OP_CODE_LOOKUP.put('A', OP_HAN_ASCII_TO_ZEN_ASCII);
