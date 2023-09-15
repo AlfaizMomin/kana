@@ -11,6 +11,7 @@ import java.util.Map;
   * http://www.php.net/manual/en/function.mb-convert-kana.php
   */
 public class KanaConverter
+ 
 {
     // Conversion Operations Types
     //// Matched numeric values to originals in PHP's source code
