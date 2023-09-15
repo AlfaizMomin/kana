@@ -2,7 +2,9 @@ package com.mariten.kanatools;
 import com.mariten.kanatools.KanaAppraiser;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
   * Provides easy, automatic string conversions often necessary when dealing with Japanese text
@@ -31,9 +33,10 @@ public class KanaConverter
     public static final int OP_ZEN_HIRA_TO_ZEN_KATA        = 0x00010000;
     public static final int OP_ZEN_KATA_TO_ZEN_HIRA        = 0x00020000;
 
+
     //// Maintain backwards compatibility (based on mb_convert_kana's "$option" parameter from PHP)
     //// Details: http://php.net/manual/en/function.mb-convert-kana.php
-    public static final Map<Character, Integer> LETTER_OP_CODE_LOOKUP;
+    protected static final Map<Character, Integer> LETTER_OP_CODE_LOOKUP;
     static {
         LETTER_OP_CODE_LOOKUP = new HashMap<Character, Integer>();
         LETTER_OP_CODE_LOOKUP.put('A', OP_HAN_ASCII_TO_ZEN_ASCII);
@@ -82,6 +85,10 @@ public class KanaConverter
             do_collapse_on_hankaku_diacritic = false;
         }
 
+        // Prepare excluded characters lookup
+        Set<Character> ignore_char_lookup = makeIgnoreCharLookup(chars_to_ignore);
+
+        // Init data holders
         int char_count = original_string.length();
         StringBuffer new_string = new StringBuffer();
         int i = 0;
@@ -96,8 +103,7 @@ public class KanaConverter
             }
 
             // Skip all conversions if character is on the excluded chars list
-            boolean is_ignore_char = isIgnoreChar(current_char, chars_to_ignore);
-            if(is_ignore_char) {
+            if(ignore_char_lookup.contains(current_char)) {
                 new_string.append(current_char);
                 i++;
                 continue;
@@ -273,8 +279,8 @@ public class KanaConverter
 
     //{{{ Hankaku Katakana related mappings
     // Diacritic constants
-    public static final char HANKAKU_VOICED_MARK    = 'ﾞ';  // dakuten
-    public static final char HANKAKU_ASPIRATED_MARK = 'ﾟ';  // handakuten
+    protected static final char HANKAKU_VOICED_MARK    = 'ﾞ';  // dakuten
+    protected static final char HANKAKU_ASPIRATED_MARK = 'ﾟ';  // handakuten
 
     protected static final Map<Character, Character> MAPPING_HANKAKU_TO_ZENKAKU_KATAKANA_UNVOICED;
     static {
@@ -510,11 +516,11 @@ public class KanaConverter
 
 
     // Connect mapping of hiragana and katakana char codes
-    public static final int OFFSET_ZENKAKU_HIRAGANA_TO_ZENKAKU_KATAKANA =
+    protected static final int OFFSET_ZENKAKU_HIRAGANA_TO_ZENKAKU_KATAKANA =
     (KanaAppraiser.ZENKAKU_KATAKANA_FIRST - KanaAppraiser.ZENKAKU_HIRAGANA_FIRST);
 
     // Connect mapping of regular ASCII characters to Zenkaku ASCII characters
-    public static final int OFFSET_HANKAKU_ASCII_TO_ZENKAKU_ASCII =
+    protected static final int OFFSET_HANKAKU_ASCII_TO_ZENKAKU_ASCII =
     (KanaAppraiser.ZENKAKU_ASCII_FIRST - KanaAppraiser.HANKAKU_ASCII_FIRST);
 
 
@@ -704,19 +710,15 @@ public class KanaConverter
     //}}}
 
 
-    //{{{ boolean isIgnoreChar(char, String)
-    protected static boolean isIgnoreChar(char char_to_check, String chars_to_ignore)
+    //{{{ boolean makeIgnoreCharLookup(String)
+    protected static Set<Character> makeIgnoreCharLookup(String chars_to_ignore)
     {
+        Set<Character> lookup_hash = new HashSet<Character>();
         int ignore_char_count = chars_to_ignore.length();
         for(int i = 0; i < ignore_char_count; i++) {
-            if(char_to_check == chars_to_ignore.charAt(i)) {
-                // Matched
-                return true;
-            }
+            lookup_hash.add(chars_to_ignore.charAt(i));
         }
-
-        // No matches
-        return false;
+        return lookup_hash;
     }
     //}}}
 
