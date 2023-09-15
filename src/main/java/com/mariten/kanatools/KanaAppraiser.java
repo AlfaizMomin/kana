@@ -45,7 +45,7 @@ public class KanaAppraiser
 
     public static final char ZENKAKU_NUMBER_FIRST = '０';               // U+FF10
     public static final char ZENKAKU_NUMBER_LAST  = '９';               // U+FF19
-
+  System.out.println("EXAMPLE:");  
 
     //// Bounds for Alphabetic
     public static final char HANKAKU_LETTER_UPPER_FIRST = 'A';          // U+0041
