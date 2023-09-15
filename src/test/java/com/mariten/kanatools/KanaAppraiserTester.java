@@ -5,6 +5,7 @@ public abstract class KanaAppraiserTester
 {
     public KanaAppraiserTester()
     {
+        if(){}
         // Test instantiation
         KanaAppraiser kana_evaluator_object = new KanaAppraiser();
     }
