@@ -4,6 +4,7 @@ class SampleKanaConverter
 {
     public static void main(String[] args)
     {
+        System.out.println("EXAMPLE:kkk");
         // Check for arg input
         if(args.length < 1) {
             System.out.println("EXAMPLE:");
