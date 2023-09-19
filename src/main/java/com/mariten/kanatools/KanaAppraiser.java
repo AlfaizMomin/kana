@@ -5,6 +5,7 @@ package com.mariten.kanatools;
   */
 public class KanaAppraiser
 {
+ //
     // Character set lower/upper bound definitions
     //// Bounds for Hiragana
     public static final char ZENKAKU_HIRAGANA_FIRST = 'ぁ';             // U+3041
