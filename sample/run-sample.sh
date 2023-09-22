@@ -5,6 +5,8 @@ SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 cd $SCRIPT_DIR
 rm *.class >/dev/null 2>/dev/null
 
+
+
 # Compile
 javac -encoding UTF-8 -cp ../compiled/jar/kanatools.jar SampleKanaConverter.java
 
